@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.bitsighttech.com/hc/en-us/articles/115014888388-API-Token-Management
+docs: https://help.bitsighttech.com/hc/en-us/articles/115014888388-API-Token-Management
+summary:
+  types: [http]
+  http_schemes: [basic]
+  api_key_in: []
+  oauth2_flows: []
+  transport: https-only
+schemes:
+- name: apiTokenBasic
+  type: http
+  scheme: basic
+  description: >-
+    All API requests authenticate via HTTP Basic authentication. The Bitsight API
+    token is supplied as the username with an empty password (a trailing colon with
+    nothing after it in curl's -u parameter). All requests must be made over HTTPS;
+    calls over plain HTTP fail. Tokens are generated per user under Settings ->
+    Account -> User Preferences -> Generate New Token; company/service tokens can be
+    created by admin and VRM admin roles.
+  token_management: https://help.bitsighttech.com/hc/en-us/articles/115014888388-API-Token-Management
+  token_types: https://help.bitsighttech.com/hc/en-us/articles/25748078243735-API-Token-Types
+  sources: [docs]
