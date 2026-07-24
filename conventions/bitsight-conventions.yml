@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.bitsighttech.com/hc/en-us/articles/360050111794-Pagination
+docs:
+  overview: https://help.bitsighttech.com/hc/en-us/articles/231872628-API-Documentation-Overview
+  pagination: https://help.bitsighttech.com/hc/en-us/articles/360050111794-Pagination
+  fields: https://help.bitsighttech.com/hc/en-us/sections/360012100533-API-Fields
+authentication:
+  style: http-basic
+  detail: API token as username, blank password, HTTPS required
+  ref: authentication/bitsight-authentication.yml
+versioning:
+  style: uri-path
+  detail: Major version embedded in the path, e.g. https://api.bitsighttech.com/ratings/v1/...
+pagination:
+  style: limit-offset
+  params:
+    limit: { default: 100, note: max results per page; response may return fewer }
+    offset: { default: 100 }
+    cursor: { note: included in responses for select large-dataset endpoints }
+  response_fields: [count, next, next_url, previous, links]
+field_selection:
+  param: fields
+  note: >-
+    Use the fields parameter to restrict returned fields and improve performance;
+    start_date/end_date are recommended where available to narrow responses.
+idempotency:
+  supported: false
+  note: No idempotency-key header is documented in the public API reference.
+rate_limiting:
+  note: No published rate-limit headers or documented quota located in the public docs.
+error_envelope:
+  note: >-
+    Standard HTTP status codes; unauthorized requests return 401. No RFC 9457
+    problem+json envelope is documented publicly.
+cross_links:
+  authentication: authentication/bitsight-authentication.yml
+  lifecycle: lifecycle/bitsight-lifecycle.yml

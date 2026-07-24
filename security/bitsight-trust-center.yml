@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+source: https://www.bitsight.com/security
+url: https://www.bitsight.com/about/trust-center
+security_page: https://www.bitsight.com/security
+certifications:
+- SOC 2 Type 2
+- ISO 27001
+- HIPAA
+evidence:
+- source: https://www.bitsight.com/security
+  keywords:
+  - soc 2 type 2
+  - iso 27001
+  - hipaa
+  - trust center

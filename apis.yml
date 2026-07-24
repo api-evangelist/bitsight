@@ -1,8 +1,29 @@
 aid: bitsight
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bitsight.png
 name: BitSight
-description: 'BitSight is a company surfaced as a portfolio company of ggv-capital, menlo-ventures and
-  added to the API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Bitsight is a global cyber risk intelligence platform that combines security
+  ratings, external attack surface management (EASM), third-party risk management
+  (TPRM), and cyber threat intelligence (CTI) in a single data model. Its outside-in,
+  agentless monitoring produces continuously updated security ratings validated
+  against real-world breach likelihood, powering vendor risk workflows, insurance
+  underwriting, and capital-markets portfolio oversight for more than 3,500
+  organizations across 60+ countries. Bitsight exposes a RESTful HTTP API at
+  api.bitsighttech.com (companies, portfolios, ratings, findings, alerts, and CTI)
+  authenticated with an API token over HTTP Basic, documented in the Bitsight
+  Knowledge Base and an interactive Stoplight reference.
 url: https://raw.githubusercontent.com/api-evangelist/bitsight/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,11 +34,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Security
-apis: []
+- Cyber Risk
+- Security Ratings
+- Third-Party Risk Management
+- Attack Surface Management
+- Threat Intelligence
+- Vendor Risk
+apis:
+- name: Bitsight API
+  description: >-
+    RESTful API for Bitsight security ratings, portfolio and company data, findings,
+    alerts, and cyber threat intelligence. Authenticated with an API token via HTTP
+    Basic over HTTPS; versioned in the URL path (e.g. /ratings/v1/).
+  humanURL: https://help.bitsighttech.com/hc/en-us/articles/231872628-API-Documentation-Overview
+  baseURL: https://api.bitsighttech.com
+  properties:
+  - type: APIReference
+    url: https://bitsight.stoplight.io/
+  - type: Authentication
+    url: authentication/bitsight-authentication.yml
+  - type: Conventions
+    url: conventions/bitsight-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/bitsight-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +69,50 @@ maintainers:
 common:
 - type: Website
   url: http://www.bitsight.com/
+- type: DeveloperPortal
+  url: https://help.bitsighttech.com/hc/en-us/categories/360005934253-Bitsight-API
+- type: Documentation
+  url: https://help.bitsighttech.com/hc/en-us/articles/231872628-API-Documentation-Overview
+- type: APIReference
+  url: https://bitsight.stoplight.io/
+- type: GettingStarted
+  url: https://help.bitsighttech.com/hc/en-us/sections/4411972074263-Bitsight-API-Guides
+- type: Support
+  url: https://help.bitsighttech.com/hc/en-us
+- type: Blog
+  url: https://www.bitsight.com/blog
+- type: Login
+  url: https://service.bitsighttech.com
+- type: TermsOfService
+  url: https://www.bitsight.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.bitsight.com/privacy-policy
+- type: TrustCenter
+  url: security/bitsight-trust-center.yml
+- type: Compliance
+  url: https://www.bitsight.com/security
+- type: Authentication
+  url: authentication/bitsight-authentication.yml
+- type: Conventions
+  url: conventions/bitsight-conventions.yml
+- type: Lifecycle
+  url: lifecycle/bitsight-lifecycle.yml
+- type: Packages
+  url: packages/bitsight-packages.yml
+- type: WellKnown
+  url: well-known/bitsight-well-known.yml
+- type: SecurityTxt
+  url: well-known/bitsight-security.txt
+- type: LLMsTxt
+  url: llms/bitsight-llms.txt
+- type: DomainSecurity
+  url: security/bitsight-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/bitsight-vulnerability-disclosure.yml
+- type: Security
+  url: security/bitsight-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

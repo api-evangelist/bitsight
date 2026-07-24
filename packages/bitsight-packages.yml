@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: PyPI + GitHub registry search for Bitsight API client libraries
+note: >-
+  Bitsight publishes no first-party client SDK. The available libraries are
+  community-maintained wrappers over the public REST API (HTTP Basic auth with an
+  API token). They are recorded here as community packages (official: false) and do
+  NOT earn an SDKs pointer.
+packages:
+- language: python
+  registry: pypi
+  name: bitsight
+  url: https://pypi.org/project/bitsight/
+  install: pip install bitsight
+  repository: https://github.com/brandon-smith-187/bitsight
+  official: false
+  maintainer: Brandon Smith (community)
+- language: python
+  registry: github
+  name: BitSightAPI
+  url: https://github.com/InfosecSapper/BitSightAPI
+  install: git clone https://github.com/InfosecSapper/BitSightAPI
+  official: false
+  maintainer: InfosecSapper (community)

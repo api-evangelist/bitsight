@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.bitsighttech.com/hc/en-us/articles/231872628-API-Documentation-Overview
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: >-
+    Version is embedded in the request path per product family, e.g.
+    https://api.bitsighttech.com/ratings/v1/... . Some resources expose a v2.
+  docs: https://help.bitsighttech.com/hc/en-us/articles/231872628-API-Documentation-Overview
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation/sunset (RFC 8594) policy located.
+sla:
+  url: null
+status_page:
+  url: null
+  note: No public status page (status.bitsight* did not resolve).
+deprecated_operations: []

@@ -1,0 +1,5 @@
+# Please submit security concerns via Bugcrowd
+# To be invited to Bitsight's Bugcrowd Bug Bounty Program, please contact bug@bitsight.com
+
+Contact: mailto:bug@bitsight.com
+Expires: 2026-10-31T04:00:00.000Z
