@@ -1,0 +1,29 @@
+# Front Door AI Index — bitsight — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: bitsight
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.bitsight.com
+  final_host: www.bitsight.com
+  ownership: own
+  owner: bitsight
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 11
+  host_score: 11
+  density: 9.38
+  words: 1173
+  tiers:
+    agentic: 3
+    core: 8
+    model: 0
+  ambiguous: 23
+  top_terms:
+    intelligence: 21
+    AI: 8
+    MCP: 2
+    agent: 2
+    agentic: 1
