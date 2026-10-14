@@ -1,7 +1,10 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- duck-creek/integrations/duck-creek-integration-edges.yml
 - https://aws.amazon.com/marketplace/
+- microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+- splunk/integrations/splunk-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -19,3 +22,61 @@ edges:
   seller_name: Bitsight
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: Duck Creek (own)
+  partner: duck-creek
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.duckcreek.com/partner/bitsight/
+  mirror_of: duck-creek/integrations/duck-creek-integration-edges.yml
+  apps:
+  - BitSight
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Solution
+- partner_name: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/BitSight
+  mirror_of: microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+  apps:
+  - BitSight
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Security - Others
+  badges:
+  - support-tier:partner
+- partner_name: Splunk (own)
+  partner: splunk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://splunkbase.splunk.com/app/6354/
+  mirror_of: splunk/integrations/splunk-integration-edges.yml
+  apps:
+  - BitSight Security Performance Management for Splunk App
+  - BitSight Security Performance Management for Splunk Add-On
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: app
+source:
+- duck-creek/integrations/duck-creek-integration-edges.yml
+- microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+- splunk/integrations/splunk-integration-edges.yml
