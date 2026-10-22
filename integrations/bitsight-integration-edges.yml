@@ -6,6 +6,7 @@ checked:
 - https://cloudsecurityalliance.org/star/registry
 - https://eucoc.cloud/en/public-register/list-of-adherent-services
 - microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+- power-bi/integrations/power-bi-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
 marketplace_apps: []
 edges:
@@ -60,6 +61,23 @@ edges:
   category: Security - Others
   badges:
   - support-tier:partner
+- partner_name: Power BI (own)
+  partner: power-bi
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://learn.microsoft.com/en-us/power-query/connectors/bitsight-security-ratings
+  mirror_of: power-bi/integrations/power-bi-integration-edges.yml
+  apps:
+  - Bitsight Security Ratings
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: Other
 - partner_name: Splunk (own)
   partner: splunk
   partner_match: mirror
