@@ -97,3 +97,72 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
+- slug: bitsight-servicenow-store-partner-apps
+  label: ServiceNow Store (partner apps)
+  partner: servicenow
+  partner_name: ServiceNow Store (partner apps)
+  category: ServiceNow Store partner app / app certification
+  type: register
+  channel: standard-directory
+  evidence: https://store.servicenow.com/store/seller/beef1831db833a80bd7ef47e0f961998
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ServiceNow Store (store.servicenow.com/store/sitemap_xml -> /store/app/<id> server-rendered pages)
+    standard: ServiceNow Store app certification (ServiceNow Certified App badge)
+    spec_file: null
+    role: servicenow-store-partner
+    registered_name: BitSight Technologies, Inc.
+    register_id: beef1831db833a80bd7ef47e0f961998
+    matched_domain: bitsight.com
+    matched_by: domain
+    identity_source: the listing's own seller website link (no lookup)
+    certified_products:
+    - product: ServiceNow Certified App (scoped_app / content)
+      product_type: scoped_app / content
+      standard: ServiceNow Store app certification (ServiceNow Certified App badge)
+      lapsed: false
+      products_sample:
+      - Bitsight for Security Posture Management Connector
+      releases:
+      - Yokohama
+      - Zurich
+      - Australia
+    - product: ServiceNow Certified App (scoped_app / integration)
+      product_type: scoped_app / integration
+      standard: ServiceNow Store app certification (ServiceNow Certified App badge)
+      lapsed: false
+      products_sample:
+      - Bitsight Third-Party Cyber Risk
+      - Bitsight for Security Incident Response
+      releases:
+      - Yokohama
+      - Zurich
+      - Australia
+    - product: ServiceNow Certified App (scoped_app / standalone)
+      product_type: scoped_app / standalone
+      standard: ServiceNow Store app certification (ServiceNow Certified App badge)
+      lapsed: false
+      products_sample:
+      - Bitsight Vendor Risk Management
+      - Bitsight for IT Service Management
+      - Bitsight for Vulnerability Response
+      releases:
+      - Yokohama
+      - Zurich
+      - Australia
+    products_sample:
+    - Bitsight Third-Party Cyber Risk
+    - Bitsight Vendor Risk Management
+    - Bitsight for IT Service Management
+    - Bitsight for Security Incident Response
+    - Bitsight for Security Posture Management Connector
+    - Bitsight for Vulnerability Response
+    signal_note: 'listing alone = standard-participant; certified_products = one entry per Application type the
+      seller holds a ServiceNow Certified App badge for, standard named on each; lapsed: true when none of that
+      type''s certified apps lists either of the two newest release families on the Store; app counts are context,
+      never counted'
+    detected_by: sweep-servicenow-store.py
+    detected: '2026-10-23'
+  status: not-a-workflow
+  arazzo: null
